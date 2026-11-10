@@ -3,15 +3,15 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Konijnenverzorging gidsen — Hopwijs</title>
-  <meta name="description" content="Overzicht van Nederlandse koopgidsen voor konijnenverzorging: hok, ren, hooi, voer, bedding, harnas, seizoen en meer." />
+  <title>Konijnenverzorging gidsen (hub) — Hopwijs</title>
+  <meta name="description" content="Hub: alle Nederlandse Hopwijs-koopgidsen voor konijnen — starter, verblijf, voeding, hygiëne, accessoires en seizoen. Welzijn eerst." />
   <link rel="canonical" href="https://gewoonian.github.io/hopwijs/gidsen/" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,650&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../css/styles.css" />
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"CollectionPage","name":"Konijnenverzorging gidsen — Hopwijs","inLanguage":"nl"}
+  {"@context":"https://schema.org","@type":"CollectionPage","name":"Konijnenverzorging gidsen — Hopwijs","url":"https://gewoonian.github.io/hopwijs/gidsen/","inLanguage":"nl","isPartOf":{"@type":"WebSite","name":"Hopwijs","url":"https://gewoonian.github.io/hopwijs/"}}
   </script>
 </head>
 <body>
@@ -27,7 +27,7 @@
   <main class="prose">
     <h1>Konijnenverzorging — gidsen-hub</h1>
     <div class="disclosure">
-      <strong>#advertentie / partnerlinks:</strong> productlinks naar webshops (Bol, Amazon NL, Zooplus e.a.) kunnen partnerlinks zijn. Dat kost jou niets extra. Partners bepalen niet de aanbeveling. Affiliate-IDs: placeholders tot de sitehouder tracking-IDs levert (<code>js/affiliate.js</code>). Zie <a href="../disclosure.html">disclosure</a>.
+      <strong>#advertentie / partnerlinks:</strong> productlinks naar webshops (Bol, Amazon NL, Zooplus e.a.) kunnen partnerlinks zijn. Dat kost jou niets extra. Partners bepalen niet de aanbeveling. Affiliate-IDs: <code>[AFFILIATE_ID_PENDING]</code> — plak echte tracking/site-IDs in <code>js/site-config.js</code>. Zie <a href="../disclosure.html">disclosure</a>.
     </div>
     <p class="vet-note">Geen medisch advies. Bij ziekte, pijn of plotseling niet eten: dierenarts.</p>
 
@@ -90,11 +90,11 @@
 
     <div class="cta-box">
       <h2>Shop-zoeken (nog zonder tracking-ID)</h2>
-      <p>Gebruik deze zoektermen bij Bol/Amazon/Zooplus. Zodra affiliate-IDs live zijn, worden links getrackt via <code>affiliate.js</code>.</p>
+      <p>Gebruik deze zoektermen bij Bol/Amazon/Zooplus. Shopzoekopdrachten gebruiken <code>data-affiliate</code>-hooks; tracking-IDs plak je in <code>js/site-config.js</code>.</p>
       <div class="shop-links">
-        <a class="btn btn-outline" href="https://www.bol.com/nl/nl/s/?searchtext=konijnenhok" rel="nofollow sponsored noopener" target="_blank">Bol: konijnenhok</a>
-        <a class="btn btn-outline" href="https://www.amazon.nl/s?k=konijnenvoer" rel="nofollow sponsored noopener" target="_blank">Amazon: konijnenvoer</a>
-        <a class="btn btn-outline" href="https://www.zooplus.nl/search/konijn" rel="nofollow sponsored noopener" target="_blank">Zooplus: konijn</a>
+        <a class="btn btn-outline" href="https://www.bol.com/nl/nl/s/?searchtext=konijnenhok" data-affiliate="bol" data-campaign="index" target="_blank" rel="noopener noreferrer">Bol: konijnenhok</a>
+        <a class="btn btn-outline" href="https://www.amazon.nl/s?k=konijnenvoer" data-affiliate="amazon" data-campaign="index" target="_blank" rel="noopener noreferrer">Amazon: konijnenvoer</a>
+        <a class="btn btn-outline" href="https://www.zooplus.nl/search/konijn" data-affiliate="zooplus" data-campaign="index" target="_blank" rel="noopener noreferrer">Zooplus: konijn</a>
       </div>
     </div>
 
@@ -108,6 +108,7 @@
       </span>
     </div>
   </footer>
-  <script src="../js/affiliate.js" defer></script>
+  <script src="../js/site-config.js" defer></script>
+  <script src="../js/site-bootstrap.js" defer></script>
 </body>
 </html>

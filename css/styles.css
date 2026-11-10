@@ -338,6 +338,39 @@ main {
   color: var(--muted);
 }
 
+
+.cta-strip {
+  margin: 0 0 1.75rem;
+  padding: 1rem 1.15rem;
+  border: 1px solid var(--line);
+  background: rgba(63, 95, 72, 0.07);
+}
+
+.cta-strip p {
+  margin: 0 0 0.75rem;
+  color: var(--ink);
+}
+
+.cta-strip .cta-row {
+  margin: 0;
+  animation: none;
+}
+
+.cta-box--strong {
+  background: rgba(63, 95, 72, 0.1);
+  border-color: rgba(63, 95, 72, 0.28);
+}
+
+.cta-kicker {
+  margin: 0 0 0.35rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--moss);
+  font-family: var(--font-sans);
+  font-weight: 700;
+}
+
 .cta-box {
   margin: 2.25rem 0 0;
   padding: 1.25rem 1.35rem;

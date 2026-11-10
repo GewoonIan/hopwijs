@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Affiliate disclosure — Hopwijs</title>
   <meta name="description" content="Transparantie over partnerlinks (#advertentie) op Hopwijs." />
+  <link rel="canonical" href="https://gewoonian.github.io/hopwijs/disclosure.html" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,650&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet" />
@@ -24,7 +25,7 @@
     <h1>Affiliate disclosure</h1>
     <p><strong>Transparantie:</strong> sommige links op Hopwijs zijn partnerlinks (#advertentie). Klik je via zo’n link en koop je iets, dan ontvangt Hopwijs mogelijk een commissie. Dat kost jou niets extra.</p>
     <p>Aanbevelingen volgen vaste selectiecriteria (welzijn, veiligheid, praktische bruikbaarheid). Partners bepalen niet onze scores. We verzinnen geen verdiensten of gegarandeerde resultaten.</p>
-    <p>Tracking-IDs staan als placeholder tot de sitehouder officiële affiliate-accounts heeft. Tot die tijd kunnen shop-links ongetrackt zijn.</p>
+    <p>Affiliate-IDs: <code>[AFFILIATE_ID_PENDING]</code> — Ian plakt echte tracking/site-IDs één keer in <code>js/site-config.js</code> (Amazon NL, Bol, Awin/Zooplus, TradeTracker). Gidsen gebruiken <code>a[data-affiliate]</code>; bootstrap zet Amazon-<code>tag</code>, UTM en <code>rel=sponsored</code> zodra IDs geen <code>*_PENDING</code> meer zijn. Tot die tijd: schone shop-URL’s.</p>
     <p>Content over verzorging is <strong>geen medisch advies</strong>. Bij ziekte of twijfel: dierenarts (bij voorkeur konijnkundig).</p>
   </main>
   <footer class="site-footer">
@@ -33,5 +34,7 @@
       <a href="privacy.html">Privacy</a>
     </div>
   </footer>
+  <script src="js/site-config.js" defer></script>
+  <script src="js/site-bootstrap.js" defer></script>
 </body>
 </html>
