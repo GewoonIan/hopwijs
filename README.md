@@ -1,9 +1,12 @@
 # Hopwijs
 
-Statische NL-site voor konijnenverzorging (affiliate SEO, €0 start).
+Nederlandse koopgidsen voor konijnenverzorging — welzijn eerst, shop daarna.
 
-- Live: https://gewoonian.github.io/hopwijs/
-- Affiliate placeholders: `js/affiliate.js` (Ian vult IDs)
-- Docs: project store `docs/konijnen/`
+**Live:** https://gewoonian.github.io/hopwijs/
 
-Geen verzonnen omzet of tracking-IDs.
+## Config (Ian)
+
+Eén paste-plek: [`js/site-config.js`](js/site-config.js) — Amazon/Bol/Awin/TradeTracker, GSC, analytics, e-mail.  
+Laat `*_PENDING` staan tot je echte IDs hebt. Geen verzonnen tracking-IDs committen.
+
+Bootstrap: `js/site-bootstrap.js` (laadt niets extern zolang pending / analytics `none`).

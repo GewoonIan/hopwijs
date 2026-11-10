@@ -26,7 +26,7 @@
   <main class="prose">
     <h1>Konijn en hitte: koelen met verstand (geen medische claims)</h1>
     <div class="disclosure">
-      <strong>#advertentie / partnerlinks:</strong> productlinks naar webshops (Bol, Amazon NL, Zooplus e.a.) kunnen partnerlinks zijn. Dat kost jou niets extra. Partners bepalen niet de aanbeveling. Affiliate-IDs: placeholders tot de sitehouder tracking-IDs levert (<code>js/affiliate.js</code>). Zie <a href="../disclosure.html">disclosure</a>.
+      <strong>#advertentie / partnerlinks:</strong> productlinks naar webshops (Bol, Amazon NL, Zooplus e.a.) kunnen partnerlinks zijn. Dat kost jou niets extra. Partners bepalen niet de aanbeveling. Affiliate-IDs: <code>[AFFILIATE_ID_PENDING]</code> — plak echte tracking/site-IDs in <code>js/site-config.js</code>. Zie <a href="../disclosure.html">disclosure</a>.
     </div>
     <p class="vet-note">Geen medisch advies. Bij lusteloosheid, hijgen, sloomheid of niet eten bij hitte: direct dierenarts — spoed.</p>
 
@@ -68,9 +68,9 @@
     <div class="cta-box">
       <h2>Verder kijken in shops</h2>
       <div class="shop-links">
-        <a class="btn btn-solid" href="https://www.bol.com/nl/nl/s/?searchtext=koeltegel%20konijn" rel="nofollow sponsored noopener" target="_blank">Bol: koeltegel</a>
-        <a class="btn btn-outline" href="https://www.amazon.nl/s?k=cooling+mat+konijn" rel="nofollow sponsored noopener" target="_blank">Amazon NL</a>
-        <a class="btn btn-outline" href="https://www.zooplus.nl/search/koeling" rel="nofollow sponsored noopener" target="_blank">Zooplus</a>
+        <a class="btn btn-solid" href="https://www.bol.com/nl/nl/s/?searchtext=koeltegel%20konijn" data-affiliate="bol" data-campaign="konijn-hitte-koelen" target="_blank" rel="noopener noreferrer">Bol: koeltegel</a>
+        <a class="btn btn-outline" href="https://www.amazon.nl/s?k=cooling+mat+konijn" data-affiliate="amazon" data-campaign="konijn-hitte-koelen" target="_blank" rel="noopener noreferrer">Amazon NL</a>
+        <a class="btn btn-outline" href="https://www.zooplus.nl/search/koeling" data-affiliate="zooplus" data-campaign="konijn-hitte-koelen" target="_blank" rel="noopener noreferrer">Zooplus</a>
       </div>
     </div>
 
@@ -91,6 +91,7 @@
       </span>
     </div>
   </footer>
-  <script src="../js/affiliate.js" defer></script>
+  <script src="../js/site-config.js" defer></script>
+  <script src="../js/site-bootstrap.js" defer></script>
 </body>
 </html>

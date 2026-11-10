@@ -1,36 +1,33 @@
 /**
- * Hopwijs affiliate config — PLACEHOLDERS ONLY.
- * Ian vult echte IDs in na goedkeuring bij Bol / Amazon / Awin / TradeTracker.
- * Commit nooit verzonnen tracking-IDs als “live”.
+ * Hopwijs affiliate.js — thin compatibility shim.
+ * Prefer js/site-config.js + js/site-bootstrap.js (één paste-plek).
+ * Kept so older references still resolve without inventing IDs.
  */
-window.HOPWIJS_AFFILIATE = {
-  enabled: false,
-  bolSiteId: "", // Bol Partner site-id — [IAN_FILLS]
-  amazonTag: "", // Amazon Associates tag, bijv. hopwijs-21 — [IAN_FILLS]
-  awinPublisherId: "", // Awin publisher id — [IAN_FILLS]
-  tradetracker: {
-    // campaignId: clickId mapping — [IAN_FILLS]
-  },
-  // Niet-getrackte fallbacks (veilig tot IDs bestaan)
-  fallback: {
-    bolSearch: "https://www.bol.com/nl/nl/s/?searchtext=",
-    amazonSearch: "https://www.amazon.nl/s?k=",
-    zooplusSearch: "https://www.zooplus.nl/search/"
+(function () {
+  var cfg = window.HOPWIJS_CONFIG || {};
+  var aff = cfg.AFFILIATE || {};
+  function pending(v) {
+    return !v || /_PENDING$/i.test(String(v).trim());
   }
-};
-
-window.hopwijsShopSearch = function (query, merchant) {
-  var cfg = window.HOPWIJS_AFFILIATE || {};
-  var q = encodeURIComponent(query || "");
-  var fb = cfg.fallback || {};
-  if (merchant === "amazon") {
-    var url = (fb.amazonSearch || "https://www.amazon.nl/s?k=") + q;
-    if (cfg.enabled && cfg.amazonTag) url += "&tag=" + encodeURIComponent(cfg.amazonTag);
-    return url;
+  window.HOPWIJS_AFFILIATE = {
+    enabled: false,
+    bolSiteId: pending(aff.BOL_SITE_ID) ? "" : aff.BOL_SITE_ID,
+    amazonTag: pending(aff.AMAZON_NL_TRACKING_ID) ? "" : aff.AMAZON_NL_TRACKING_ID,
+    awinPublisherId: pending(aff.AWIN_PUBLISHER_ID) ? "" : aff.AWIN_PUBLISHER_ID,
+    tradetracker: {},
+    fallback: cfg.FALLBACK || {
+      bolSearch: "https://www.bol.com/nl/nl/s/?searchtext=",
+      amazonSearch: "https://www.amazon.nl/s?k=",
+      zooplusSearch: "https://www.zooplus.nl/search/"
+    }
+  };
+  if (typeof window.hopwijsShopSearch !== "function") {
+    window.hopwijsShopSearch = function (query, merchant) {
+      var fb = window.HOPWIJS_AFFILIATE.fallback || {};
+      var q = encodeURIComponent(query || "");
+      if (merchant === "amazon") return (fb.amazonSearch || "https://www.amazon.nl/s?k=") + q;
+      if (merchant === "zooplus") return (fb.zooplusSearch || "https://www.zooplus.nl/search/") + q;
+      return (fb.bolSearch || "https://www.bol.com/nl/nl/s/?searchtext=") + q;
+    };
   }
-  if (merchant === "zooplus") {
-    return (fb.zooplusSearch || "https://www.zooplus.nl/search/") + q;
-  }
-  // default Bol
-  return (fb.bolSearch || "https://www.bol.com/nl/nl/s/?searchtext=") + q;
-};
+})();

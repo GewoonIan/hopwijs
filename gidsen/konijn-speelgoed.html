@@ -26,7 +26,7 @@
   <main class="prose">
     <h1>Konijnenspeelgoed: verrijking die veilig knaagbaar is</h1>
     <div class="disclosure">
-      <strong>#advertentie / partnerlinks:</strong> productlinks naar webshops (Bol, Amazon NL, Zooplus e.a.) kunnen partnerlinks zijn. Dat kost jou niets extra. Partners bepalen niet de aanbeveling. Affiliate-IDs: placeholders tot de sitehouder tracking-IDs levert (<code>js/affiliate.js</code>). Zie <a href="../disclosure.html">disclosure</a>.
+      <strong>#advertentie / partnerlinks:</strong> productlinks naar webshops (Bol, Amazon NL, Zooplus e.a.) kunnen partnerlinks zijn. Dat kost jou niets extra. Partners bepalen niet de aanbeveling. Affiliate-IDs: <code>[AFFILIATE_ID_PENDING]</code> — plak echte tracking/site-IDs in <code>js/site-config.js</code>. Zie <a href="../disclosure.html">disclosure</a>.
     </div>
     <p class="vet-note">Geen medisch advies. Bij ziekte, pijn of plotseling niet eten: dierenarts.</p>
 
@@ -65,11 +65,11 @@
 
     <div class="cta-box">
       <h2>Verder kijken in shops</h2>
-      <p>Zoek “konijn speelgoed” of “knaagdier tunnel”. Links nog zonder affiliate-tag.</p>
+      <p>Zoek “konijn speelgoed” of “knaagdier tunnel”. Shopzoekopdrachten gebruiken <code>data-affiliate</code>-hooks; tracking-IDs plak je in <code>js/site-config.js</code>.</p>
       <div class="shop-links">
-        <a class="btn btn-solid" href="https://www.bol.com/nl/nl/s/?searchtext=konijn%20speelgoed" rel="nofollow sponsored noopener" target="_blank">Bol: speelgoed</a>
-        <a class="btn btn-outline" href="https://www.amazon.nl/s?k=konijn+speelgoed" rel="nofollow sponsored noopener" target="_blank">Amazon NL</a>
-        <a class="btn btn-outline" href="https://www.zooplus.nl/search/konijn%20speelgoed" rel="nofollow sponsored noopener" target="_blank">Zooplus</a>
+        <a class="btn btn-solid" href="https://www.bol.com/nl/nl/s/?searchtext=konijn%20speelgoed" data-affiliate="bol" data-campaign="konijn-speelgoed" target="_blank" rel="noopener noreferrer">Bol: speelgoed</a>
+        <a class="btn btn-outline" href="https://www.amazon.nl/s?k=konijn+speelgoed" data-affiliate="amazon" data-campaign="konijn-speelgoed" target="_blank" rel="noopener noreferrer">Amazon NL</a>
+        <a class="btn btn-outline" href="https://www.zooplus.nl/search/konijn%20speelgoed" data-affiliate="zooplus" data-campaign="konijn-speelgoed" target="_blank" rel="noopener noreferrer">Zooplus</a>
       </div>
     </div>
 
@@ -90,6 +90,7 @@
       </span>
     </div>
   </footer>
-  <script src="../js/affiliate.js" defer></script>
+  <script src="../js/site-config.js" defer></script>
+  <script src="../js/site-bootstrap.js" defer></script>
 </body>
 </html>

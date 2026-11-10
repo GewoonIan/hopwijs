@@ -32,9 +32,17 @@
   <main class="prose">
     <h1>Konijnenren binnen: zo kies je op ruimte en veiligheid</h1>
     <div class="disclosure">
-      <strong>#advertentie / partnerlinks:</strong> productlinks naar webshops (Bol, Amazon NL, Zooplus e.a.) kunnen partnerlinks zijn. Dat kost jou niets extra. Partners bepalen niet de aanbeveling. Affiliate-IDs: placeholders tot de sitehouder tracking-IDs levert (<code>js/affiliate.js</code>). Zie <a href="../disclosure.html">disclosure</a>.
+      <strong>#advertentie / partnerlinks:</strong> productlinks naar webshops (Bol, Amazon NL, Zooplus e.a.) kunnen partnerlinks zijn. Dat kost jou niets extra. Partners bepalen niet de aanbeveling. Affiliate-IDs: <code>[AFFILIATE_ID_PENDING]</code> — plak echte tracking/site-IDs in <code>js/site-config.js</code>. Zie <a href="../disclosure.html">disclosure</a>.
     </div>
-    <p class="vet-note">Geen medisch advies. Bij ziekte, pijn of plotseling niet eten: dierenarts.</p>
+    
+    <aside class="cta-strip" aria-label="Starter CTA">
+      <p><strong>Nog aan het opstarten?</strong> Begin met de checklist — dan shop je niet blind.</p>
+      <div class="cta-row">
+        <a class="btn btn-solid" href="konijn-houden-benodigdheden.html">Starter-checklist</a>
+        <a class="btn btn-outline" href="index.html">Alle gidsen</a>
+      </div>
+    </aside>
+<p class="vet-note">Geen medisch advies. Bij ziekte, pijn of plotseling niet eten: dierenarts.</p>
 
     <p class="lede">Een binnenren geeft vloeroppervlak zonder dat je meteen een hele kamer opgeeft. Kies op bruikbare vierkante meters, hoogte en knaagveiligheid — niet op “schattig paneelsetje”.</p>
 
@@ -81,11 +89,11 @@
 
     <div class="cta-box">
       <h2>Verder kijken in shops</h2>
-      <p>Zoek op “konijnenren” of “renpanelen” + hoogte. Links nog zonder affiliate-tag.</p>
+      <p>Zoek op “konijnenren” of “renpanelen” + hoogte. Shopzoekopdrachten gebruiken <code>data-affiliate</code>-hooks; tracking-IDs plak je in <code>js/site-config.js</code>.</p>
       <div class="shop-links">
-        <a class="btn btn-solid" href="https://www.bol.com/nl/nl/s/?searchtext=konijnenren%20binnen" rel="nofollow sponsored noopener" target="_blank">Bol: binnenren</a>
-        <a class="btn btn-outline" href="https://www.amazon.nl/s?k=konijnenren+binnen" rel="nofollow sponsored noopener" target="_blank">Amazon NL</a>
-        <a class="btn btn-outline" href="https://www.zooplus.nl/search/konijnenren" rel="nofollow sponsored noopener" target="_blank">Zooplus</a>
+        <a class="btn btn-solid" href="https://www.bol.com/nl/nl/s/?searchtext=konijnenren%20binnen" data-affiliate="bol" data-campaign="konijnenren-binnen" target="_blank" rel="noopener noreferrer">Bol: binnenren</a>
+        <a class="btn btn-outline" href="https://www.amazon.nl/s?k=konijnenren+binnen" data-affiliate="amazon" data-campaign="konijnenren-binnen" target="_blank" rel="noopener noreferrer">Amazon NL</a>
+        <a class="btn btn-outline" href="https://www.zooplus.nl/search/konijnenren" data-affiliate="zooplus" data-campaign="konijnenren-binnen" target="_blank" rel="noopener noreferrer">Zooplus</a>
       </div>
     </div>
 
@@ -106,6 +114,7 @@
       </span>
     </div>
   </footer>
-  <script src="../js/affiliate.js" defer></script>
+  <script src="../js/site-config.js" defer></script>
+  <script src="../js/site-bootstrap.js" defer></script>
 </body>
 </html>
